@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElRyan Reinigung Haus und Hand - Professionelle Reinigungsdienstleistungen in Deutschland</title>
+    <meta name="description" content="ElRyan Reinigung bietet professionelle Reinigungsdienstleistungen für Büros, Praxen, Schulen und Privathaushalte. 24h Notdienst verfügbar.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .header-top {
+            background: rgba(0,0,0,0.2);
+            padding: 8px 0;
+            font-size: 14px;
+        }
+
+        .header-top-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 20px;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .nav-container {
+            padding: 15px 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: #60a5fa;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #60a5fa;
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(30,58,138,0.9) 0%, rgba(59,130,246,0.9) 100%), url('hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 180px 0 100px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(30,58,138,0.1) 0%, rgba(59,130,246,0.1) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(16,185,129,0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16,185,129,0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #1e3a8a;
+            transform: translateY(-2px);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: #f8fafc;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 42px;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            color: white;
+            font-size: 32px;
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1e3a8a;
+        }
+
+        .service-card p {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 42px;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 25px;
+        }
+
+        .about-text p {
+            font-size: 18px;
+            color: #6b7280;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .features {
+            display: grid;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        /* Emergency Section */
+        .emergency {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .emergency h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .emergency p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .emergency-phone {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: white;
+            color: #dc2626;
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-size: 24px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+        .emergency-phone:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: #f8fafc;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #1e3a8a;
+        }
+
+        .contact-info-section {
+            padding: 50px;
+        }
+
+        .contact-info-section h3 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-item-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        /* Footer */
+        footer {
+            background: #111827;
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #60a5fa;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #d1d5db;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: #60a5fa;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 30px;
+            text-align: center;
+            color: #9ca3af;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37,211,102,0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37,211,102,0.6);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37,211,102,0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(37,211,102,0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37,211,102,0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #1e3a8a;
+                flex-direction: column;
+                padding: 20px;
+                gap: 10px;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .header-top-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .section-header h2 {
+                font-size: 32px;
+            }
+
+            .contact-form,
+            .contact-info-section {
+                padding: 30px;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> +49 176 123 456 78</span>
+                        <span><i class="fas fa-envelope"></i> info@elryan-reinigung.de</span>
+                        <span><i class="fas fa-clock"></i> 24/7 Notdienst verfügbar</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-container">
+            <div class="container">
+                <div class="nav-content">
+                    <a href="#" class="logo">ElRyan Reinigung</a>
+                    <nav>
+                        <ul class="nav-menu" id="navMenu">
+                            <li><a href="#home">Startseite</a></li>
+                            <li><a href="#services">Dienstleistungen</a></li>
+                            <li><a href="#about">Über uns</a></li>
+                            <li><a href="#contact">Kontakt</a></li>
+                            <li><a href="#emergency">Notdienst</a></li>
+                        </ul>
+                        <button class="mobile-menu-toggle" id="mobileToggle">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1>Professionelle Reinigungsdienste in Deutschland</h1>
+                <p>ElRyan Reinigung Haus und Hand - Ihr zuverlässiger Partner für alle Reinigungsarbeiten. Von Büros bis hin zu Notfällen - wir reinigen alles professionell und gründlich!</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-calendar-alt"></i>
+                        Kostenvoranschlag anfordern
+                    </a>
+                    <a href="tel:+4917612345678" class="btn btn-secondary">
+                        <i class="fas fa-phone"></i>
+                        Jetzt anrufen
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Unsere Dienstleistungen</h2>
+                <p>Komplette Reinigungslösungen für jeden Bereich - professionell, zuverlässig und verfügbar, wenn Sie uns brauchen</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <img src="office-cleaning.jpg" alt="Büroreinigung" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Büroreinigung</h3>
+                    <p>Professionelle Reinigung von Bürogebäuden, Praxen und Verwaltungsgebäuden mit modernsten Methoden und umweltfreundlichen Produkten. Regelmäßige Wartung und Tiefenreinigung.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <img src="theater-cleaning.jpg" alt="Theater & Veranstaltungsreinigung" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-theater-masks"></i>
+                    </div>
+                    <h3>Theater & Veranstaltungsreinigung</h3>
+                    <p>Spezialisierte Reinigung von Theatern, Konzerthallen und Veranstaltungsorten. Professionelle Nachbehandlung nach Events mit schneller Wiederherstellung.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <img src="lab-cleaning.jpg" alt="Laborreinigung" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Laborreinigung</h3>
+                    <p>Spezialisierte Reinigung von Laboren und medizinischen Einrichtungen unter Einhaltung strengster Hygiene- und Sicherheitsstandards nach DIN-Normen.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <img src="construction-cleaning.jpg" alt="Baustellen-Endreinigung" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3>Baustellen-Endreinigung</h3>
+                    <p>Professionelle Endreinigung nach Bau- und Renovierungsarbeiten. Wir sorgen für den perfekten Abschluss Ihres Projekts - schlüsselfertig und bezugsbereit.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <img src="medical-cleaning.jpg" alt="Medizinische Einrichtungen" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>Medizinische Einrichtungen</h3>
+                    <p>Hygienische Reinigung von Arztpraxen, Kliniken und medizinischen Zentren nach strengsten medizinischen Standards und Desinfektionsprotokollen.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <img src="event-cleaning.jpg" alt="Event-Nachbereitung" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-times"></i>
+                    </div>
+                    <h3>Event-Nachbereitung</h3>
+                    <p>Schnelle und gründliche Reinigung nach Veranstaltungen, Partys und besonderen Anlässen. Zurück zum ursprünglichen Zustand in kürzester Zeit.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <img src="gym-cleaning.jpg" alt="Fitnessstudios & Sportanlagen" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Fitnessstudios & Sportanlagen</h3>
+                    <p>Spezialisierte Reinigung von Sportstätten, Fitnessstudios und Umkleidebereichen mit desinfizierenden Produkten für optimale Hygiene.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <img src="school-cleaning.jpg" alt="Schulen & Universitäten" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Schulen & Universitäten</h3>
+                    <p>Reinigung von Bildungseinrichtungen mit besonderem Fokus auf Hygiene und Sicherheit für Schüler und Studenten. Kinderfreundliche Produkte.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <img src="playground-cleaning.jpg" alt="Spielplätze & Kindergärten" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Spielplätze & Kindergärten</h3>
+                    <p>Sichere und gründliche Reinigung von Spielplätzen und Kindertagesstätten mit kindgerechten, ungiftigen und allergikerfreundlichen Produkten.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <img src="moving-cleaning.jpg" alt="Umzugsreinigung" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-truck-moving"></i>
+                    </div>
+                    <h3>Umzugsreinigung</h3>
+                    <p>Professionelle Reinigung bei Ein- und Auszug. Wir sorgen dafür, dass alles sauber und bereit für den nächsten Schritt ist - Kaution gesichert!</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <img src="community-cleaning.jpg" alt="Gemeinschaftsräume" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Gemeinschaftsräume</h3>
+                    <p>Reinigung von gemeingenutzten Bereichen wie Treppenhäusern, Gemeinschaftsküchen und Aufenthaltsräumen in Wohnanlagen und Bürogebäuden.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <img src="emergency-cleaning.jpg" alt="24h Notdienst" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>24h Notdienst</h3>
+                    <p>Rund um die Uhr verfügbar für Notfälle und dringende Reinigungsarbeiten. Schnelle Reaktion, professionelle Lösung - auch an Wochenenden und Feiertagen.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <img src="final-cleaning.jpg" alt="Endreinigung" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-broom"></i>
+                    </div>
+                    <h3>Endreinigung</h3>
+                    <p>Gründliche Endreinigung bei Mieterwechsel, nach Renovierungen oder vor wichtigen Terminen und Besichtigungen. Perfekte Ergebnisse garantiert.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <img src="garden-work.jpg" alt="Gartenarbeiten" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Gartenarbeiten</h3>
+                    <p>Pflege und Reinigung von Außenanlagen, Terrassen und Gartenbereichen. Komplette Gartenpflege nach Ihren Wünschen - das ganze Jahr über.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <img src="garden-maintenance.jpg" alt="Gartenpflege" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Gartenpflege</h3>
+                    <p>Regelmäßige Pflege und Instandhaltung von Grünflächen, Rasenpflege und saisonale Gartenarbeiten. Professionelle Landschaftspflege.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <img src="facility-management.jpg" alt="Hausmeisterservice" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Hausmeisterservice</h3>
+                    <p>Kompletter Hausmeisterservice für Wohn- und Gewerbeimmobilien. Von kleinen Reparaturen bis zur regelmäßigen Wartung - alles aus einer Hand.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <img src="property-care.jpg" alt="Immobilienbetreuung" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Immobilienbetreuung</h3>
+                    <p>Vollständige Betreuung von Immobilien während Leerstand, Vermietung oder Verkaufsphase. Werterhaltung und Präsentation auf höchstem Niveau.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <img src="object-care.jpg" alt="Objektbetreuung" class="service-image">
+                    <div class="service-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Objektbetreuung</h3>
+                    <p>Umfassende Betreuung und Wartung von Gewerbe- und Wohnobjekten mit regelmäßigen Kontrollen und präventiven Wartungsarbeiten.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <h2>Warum ElRyan Reinigung?</h2>
+                    <p>Mit über 10 Jahren Erfahrung im Reinigungsbereich bieten wir Ihnen professionelle, zuverlässige und umfassende Reinigungsdienstleistungen in ganz Deutschland. Unser Fokus liegt auf Qualität, Zuverlässigkeit und Kundenzufriedenheit.</p>
+                    <p>Unser Team besteht aus qualifizierten Fachkräften, die mit modernster Ausrüstung und umweltfreundlichen Reinigungsmitteln arbeiten. Wir sind vollversichert und zertifiziert nach deutschen Qualitätsstandards.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Deutsche Qualitätsstandards & DIN-Normen</span>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <span>24/7 Verfügbarkeit & Notdienst</span>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <span>Umweltfreundliche & nachhaltige Produkte</span>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <span>Vollversichert & Zertifiziert</span>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <span>Über 10 Jahre Erfahrung</span>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <span>Faire Preise & transparente Kostenvoranschläge</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image fade-in">
+                    <img src="team-photo.jpg" alt="ElRyan Reinigung Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Section -->
+    <section class="emergency" id="emergency">
+        <div class="container fade-in">
+            <h2>24h Notdienst</h2>
+            <p>Notfall? Wasserschaden? Dringende Reinigung? Wir sind rund um die Uhr für Sie da!</p>
+            <div>
+                <a href="tel:+4917612345678" class="emergency-phone">
+                    <i class="fas fa-phone-alt"></i>
+                    +49 176 123 456 78
+                </a>
+                <a href="https://wa.me/4917612345678" class="emergency-phone">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp Notdienst
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Kontakt aufnehmen</h2>
+                <p>Fordern Sie Ihren kostenlosen Kostenvoranschlag an oder kontaktieren Sie uns für weitere Informationen</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-form fade-in">
+                    <h3>Kostenvoranschlag anfordern</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-Mail *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Gewünschte Dienstleistung</label>
+                            <select id="service" name="service">
+                                <option value="">Bitte wählen...</option>
+                                <option value="office">Büroreinigung</option>
+                                <option value="medical">Medizinische Einrichtungen</option>
+                                <option value="construction">Baustellen-Endreinigung</option>
+                                <option value="moving">Umzugsreinigung</option>
+                                <option value="emergency">Notdienst</option>
+                                <option value="other">Sonstiges</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Nachricht *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Beschreiben Sie bitte Ihre Anforderungen..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Kostenvoranschlag anfordern
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="contact-info-section fade-in">
+                    <h3>Kontaktinformationen</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Telefon</h4>
+                            <p>+49 176 123 456 78</p>
+                            <small>Mo-Fr: 7:00-19:00 Uhr<br>Sa: 8:00-16:00 Uhr<br>Notdienst: 24/7</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>E-Mail</h4>
+                            <p>info@elryan-reinigung.de</p>
+                            <small>Antwort innerhalb von 24 Stunden</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Servicegebiet</h4>
+                            <p>Deutschland bundesweit</p>
+                            <small>Schwerpunkt: NRW, Hessen, Bayern</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+49 176 123 456 78</p>
+                            <small>Schnelle Kommunikation & Bildversendung</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ElRyan Reinigung</h3>
+                    <p>Ihr professioneller Partner für alle Reinigungsdienstleistungen in Deutschland. Qualität, Zuverlässigkeit und Kundenzufriedenheit stehen bei uns an erster Stelle.</p>
+                    <p><strong>Geschäftsführer:</strong> ElRyan</p>
+                    <p><strong>Gegründet:</strong> 2014</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Dienstleistungen</h3>
+                    <a href="#services">Büroreinigung</a>
+                    <a href="#services">Medizinische Einrichtungen</a>
+                    <a href="#services">Baustellen-Endreinigung</a>
+                    <a href="#services">Umzugsreinigung</a>
+                    <a href="#services">24h Notdienst</a>
+                    <a href="#services">Hausmeisterservice</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <p><i class="fas fa-phone"></i> +49 176 123 456 78</p>
+                    <p><i class="fas fa-envelope"></i> info@elryan-reinigung.de</p>
+                    <p><i class="fab fa-whatsapp"></i> WhatsApp: +49 176 123 456 78</p>
+                    <p><i class="fas fa-clock"></i> 24/7 Notdienst verfügbar</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Servicegebiet</h3>
+                    <p>Deutschland bundesweit</p>
+                    <p><strong>Schwerpunktregionen:</strong></p>
+                    <a href="#">Nordrhein-Westfalen</a>
+                    <a href="#">Hessen</a>
+                    <a href="#">Bayern</a>
+                    <a href="#">Baden-Württemberg</a>
+                    <a href="#">Rheinland-Pfalz</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 ElRyan Reinigung Haus und Hand. Alle Rechte vorbehalten. | 
+                   <a href="#" style="color: #60a5fa;">Datenschutz</a> | 
+                   <a href="#" style="color: #60a5fa;">Impressum</a> | 
+                   <a href="#" style="color: #60a5fa;">AGB</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/4917612345678" class="whatsapp-btn" title="WhatsApp Kontakt">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close mobile menu if open
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Vielen Dank für Ihre Anfrage! Wir werden uns schnellstmöglich bei Ihnen melden.');
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'linear-gradient(135deg, rgba(30,58,138,0.95) 0%, rgba(59,130,246,0.95) 100%)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)';
+            }
+        });
+    </script>
+</body>
+</html>
+
